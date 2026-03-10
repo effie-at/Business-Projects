@@ -9,7 +9,7 @@ I used historical data to optimise (with Gurobi) the campaign, constrained by bu
 Given the high costs per click and low average-revenue per click, I recommended reduced spending on keywords until revenue per click increases. See the executive report for a non-technical summary.
 
 ## London House Prices Data
-This reports the development of a data-driven estimation engine to support residential property investment decisions in the London housing market. Using transaction, energy performance, and transport accessibility data, I train and compare multiple supervised learning models to predict property sale prices and to identify a portfolio of 200 properties with the highest expected investment returns.
+This project focused on building a data-driven estimation engine to support residential property investment decisions in the London housing market. Using transaction, energy performance, and transport accessibility data, I train and compare multiple supervised learning models to predict property sale prices and to identify a portfolio of 200 properties with the highest expected investment returns.
 
 The modelling pipeline combines rigorous data cleaning, exploratory analysis, feature selection, algorithmic tuning and statistical metrics on both training and validation sets to assess generalisation performance.
 
@@ -17,4 +17,14 @@ I compute expected profit margins by comparing predicted prices with asking pric
 Among the models tested, a tuned Gradient Boosting model provides the most reliable balance between predictive accuracy, robustness, and portfolio performance. Under the stated assumptions and filtering criteria, the selected portfolio yields a high expected average profit margin on the validation data: ≈73%. This estimate should be interpreted as a model-based expectation rather than a guaranteed outcome, and is sensitive to threshold choices and market conditions.
 
 Please see the technical report for greater detail.
+
+## PowerCo Energy Demand Forecasting
+This group project aimed to build an end-to-end pipeline capable of cleaning, integrating, analysing, and modelling energy demand using both historical consumption and weather variables. PowerCo could thereafter rely on accurate forecasting to schedule generation, plan supply, manage reserves, and prevent imbalances.
+
+We collected data from the National Energy System and Open Meteo. Once we cleaned the data, we merged yearly energy demand forecasts into a unified dataframe, and created database in PostgrseSQL. Our EDA showed which variables were key drivers of demand and any seasonal effects that would impact our models. We created two models and found that Sarima outperformed OLS, with 94% predictive accuracy (95% CI).
+
+## A/B Testing for D2C skincare brand
+This group project analysed whether lowering the free-delivery threshold increased average profit per customer. 
+
+We generated synthetic data with feature columns like basket-size band, channel-use, device interaction and age bracket. Having checked for proper randomisation prior to conducting regression analysis, we discovered a treatment lift of £0.28 (3.4%). When analysing interaction terms, the data showed that the treatment lift is not uniform. The treatment successfully shifted the concentration of consumers from basket sizes of <£25 to basket sizes between £25 and £40. The treatment was most effective (with statistical significance via the TikTok channel and on mobile users, which begs the question of subsequent analysis of a targeted rollout for Gen-Z users via the mobile TikTok app. 
 
